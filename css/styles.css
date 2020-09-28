@@ -1,0 +1,131 @@
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+/* ---- Custom Properties ---- */
+:root{
+    /* Colors */
+    --clr-verydarkblue: #070439;
+    --clr-desaturatedblue: hsl(238, 22%, 44%);
+    --clr-brightblue: hsl(224, 93%, 58%);
+    --clr-moderatecyan: hsl(170, 45%, 43%);
+    --clr-lightgrayblue: hsl(240, 75%, 98%);
+    --clr-lightgray: hsl(0, 0%, 75%);
+    /* Fonts and typography */
+    --ff-primary: 'Raleway', sans-serif; /* headings, cta, header nav */
+    --ff-secondary: 'Open Sans', sans-serif; /* body */
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    --fs-h1: 1.5rem;
+    --fs-h2: 1rem;
+    --fs-big: 1.5rem;
+    --fs-normal: .875rem;
+    --fs-small: .75rem;
+    /* Box Shadow */
+    /* Z index */
+    /* Others */
+}
+@media screen and (min-width: 768px){
+    :root{
+        --fs-h1: 1.5rem;
+        --fs-h2: 1rem;
+        --fs-big: 1.5rem;
+        --fs-normal: .875rem;
+        --fs-small: .75rem;
+    }
+}
+/* ---- General Styles ---- */
+/* Reset */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-normal);
+    font-weight: var(--fw-reg);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button{
+    border: none;
+    background: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* Typography */
+h1{font-size: var(--fs-h1);}
+h2{font-size: var(--fs-h2);}
+h1,
+h2,
+header,
+.btn{
+    font-family: var(--ff-primary);
+}
+/* Components */
+/* Layout */
+.wrapper{
+    padding: 0 1.75rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* ---- Header Styles ---- */
+.header{
+    padding: 1.5rem 1.5rem 0;
+    margin-bottom: 6.125rem;
+}
+.nav--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr-verydarkblue);
+    font-size: var(--fs-small);
+}
+.logo{
+    max-width: 80px;
+}
+.nav--header .nav__list{
+    display: flex;
+}
+.nav--header .nav__item{
+    margin-left: 1.5rem;
+}
+/* ---- Section Styles ---- */
+.section{
+    text-align: center;
+}
+/* Hero */
+.hero__container--img{
+    margin-bottom: 2.5rem;
+}
+.section__title--hero{
+    margin-bottom: 1.5rem;
+    line-height: 2.25rem;
+}
+.section__description--hero,
+.hero__form{
+    margin: 0 .5rem;
+}
+.section__description--hero{
+    margin-bottom: 2rem;
+    line-height: 1.31rem;
+}
+/* Productive */
+/* Subscription */
+/* ---- Footer Styles ---- */
+/* ---- Media Queries ---- */
+/* ---- Animations ---- */
