@@ -92,6 +92,9 @@ header,
     padding: .875rem 1.3rem;
     border: .6px solid var(--clr-verydarkblue);
 }
+[type="email"]::placeholder{
+    color: var(--clr-lightgray);
+}
 [class^="fab"]{
     font-size: var(--fs-normal);
 }
@@ -155,13 +158,16 @@ header,
 .section{
     text-align: center;
 }
+.section__description{
+    line-height: 1.24;
+}
 /* Hero */
 .hero__container--img{
     margin-bottom: 2.5rem;
 }
 .section__title--hero{
     margin-bottom: 1.5rem;
-    line-height: 2.25rem;
+    line-height: 1.36;
 }
 .section__description--hero,
 .hero__form{
@@ -320,11 +326,18 @@ header,
     .section{
         text-align: left;
     }
+    /* Header */
+    .nav--header{
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
     /* Hero */
     .section.hero{
         display: grid;
         grid-template-areas: "txt img";
         grid-template-columns: repeat(12, 1fr);
+        column-gap: 1rem;
     }
     .hero__container--img{
         grid-area: img;
@@ -336,6 +349,9 @@ header,
         grid-area: txt;
         grid-column: 1/7;
         align-self: center;
+    }
+    .section__title--hero{
+        line-height: 1.6;
     }
     .section__description--hero,
     .hero__form{
@@ -398,6 +414,9 @@ header,
     }
     .subscription__form{
         grid-column: 8/-1;
+    }
+    .subscription__form .btn{
+        align-self: flex-start;
     }
     /* Footer */
     .footer{
