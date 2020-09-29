@@ -32,13 +32,13 @@
 @media screen and (min-width: 768px){
     :root{
         --fs-h1: 2.5rem;
-        --fs-h2: 1rem;
+        --fs-h2: 2rem;
         --fs-big: 1rem;
-        --fs-normal: 1.06rem;
-        --fs-small: .75rem;
-        --fs-xsmall: .625rem;
-        --fs-xxsmall: .563rem;
-        --fs-xxxsmall: .375rem;
+        --fs-normal: 1rem;
+        --fs-small: .875rem;
+        --fs-xsmall: .8125rem;
+        --fs-xxsmall: .687rem;
+        --fs-xxxsmall: .5rem;
     }
 }
 /* ---- General Styles ---- */
@@ -52,6 +52,7 @@
 }
 html{
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 body{
     font-family: var(--ff-secondary);
@@ -96,19 +97,20 @@ header,
 }
 .btn{
     border: none;
-    font-weight: var(--fw-bold);
 }
 .btn--primary{
     padding: .875rem 1.3rem;
     border-radius: 3px;
     background-color: var(--clr-brightblue);
     color: var(--clr-white);
+    font-weight: var(--fw-bold);
 }
 .btn--secondary{
     color: var(--clr-moderatecyan);
     padding-bottom: 5px;
     border-bottom: 1.5px solid var(--clr-moderatecyan);
     position: relative;
+    font-weight: var(--fw-reg);
 }
 .btn--secondary::after{
     content: '';
@@ -307,17 +309,19 @@ header,
 @media screen and (min-width: 768px){
     /* Layout */
     .wrapper{
+        padding: 10rem 0;
         max-width: 1280px;
         display: inherit;
         grid-template-areas: inherit;
         grid-template-columns: inherit;
         grid-column: 1/-1;
+        column-gap: inherit;
     }
     .section{
         text-align: left;
     }
     /* Hero */
-    .hero{
+    .section.hero{
         display: grid;
         grid-template-areas: "txt img";
         grid-template-columns: repeat(12, 1fr);
@@ -350,6 +354,60 @@ header,
     }
     .hero__form [type="submit"]{
         width: 30%;
+    }
+    /* Productive */
+    .section.productive::before{
+        background-image: url(/images/bg-curve-desktop.svg);
+        background-size: cover;
+        height: 114px;
+        top: -114px;
+    }
+    .section.productive{
+        display: grid;
+        grid-template-areas: "txt img"
+                             "testimonial img";
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .productive__container--img{
+        grid-area: img;
+        grid-column: 8/-1;
+        max-width: 550px;
+    }
+    .productive__container--txt{
+        grid-area: txt;
+        grid-column: 1/7;
+    }
+    .testimonial{
+        grid-area: testimonial;
+        grid-column: 1/7;
+        max-width: 356px;
+        margin: initial;
+        padding-left: 2rem;
+        padding-right: 2.2rem;
+    }
+    /* Subscription */
+    .section.subscription{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .subscription__container--txt{
+        grid-column: 1/6;
+    }
+    .subscription__form{
+        grid-column: 8/-1;
+    }
+    /* Footer */
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .footer__container--img{
+        grid-column: 1/-1;
+    }
+    .footer__address,
+    .nav--footer,
+    .social{
+        grid-column: span 3;
     }
 }
 /* ---- Animations ---- */
