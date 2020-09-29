@@ -309,7 +309,7 @@ header,
 @media screen and (min-width: 768px){
     /* Layout */
     .wrapper{
-        padding: 10rem 0;
+        padding: 10rem 2rem;
         max-width: 1280px;
         display: inherit;
         grid-template-areas: inherit;
@@ -372,6 +372,9 @@ header,
         grid-area: img;
         grid-column: 8/-1;
         max-width: 550px;
+        margin-bottom: initial;
+        display: flex;
+        align-items: center;
     }
     .productive__container--txt{
         grid-area: txt;
@@ -400,13 +403,13 @@ header,
     .footer{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+        column-gap: 2rem;
     }
     .footer__container--img{
         grid-column: 1/-1;
     }
     .footer__address,
-    .nav--footer,
-    .social{
+    .nav--footer{
         grid-column: span 3;
     }
 }
