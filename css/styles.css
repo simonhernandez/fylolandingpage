@@ -31,11 +31,14 @@
 }
 @media screen and (min-width: 768px){
     :root{
-        --fs-h1: 1.5rem;
+        --fs-h1: 2.5rem;
         --fs-h2: 1rem;
-        --fs-big: 1.5rem;
-        --fs-normal: .875rem;
+        --fs-big: 1rem;
+        --fs-normal: 1.06rem;
         --fs-small: .75rem;
+        --fs-xsmall: .625rem;
+        --fs-xxsmall: .563rem;
+        --fs-xxxsmall: .375rem;
     }
 }
 /* ---- General Styles ---- */
@@ -302,6 +305,51 @@ header,
 }
 /* ---- Media Queries ---- */
 @media screen and (min-width: 768px){
-    
+    /* Layout */
+    .wrapper{
+        max-width: 1280px;
+        display: inherit;
+        grid-template-areas: inherit;
+        grid-template-columns: inherit;
+        grid-column: 1/-1;
+    }
+    .section{
+        text-align: left;
+    }
+    /* Hero */
+    .hero{
+        display: grid;
+        grid-template-areas: "txt img";
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .hero__container--img{
+        grid-area: img;
+        grid-column: 7/-1;
+        max-width: 640px;
+        margin-bottom: initial;
+    }
+    .hero__container--txt{
+        grid-area: txt;
+        grid-column: 1/7;
+        align-self: center;
+    }
+    .section__description--hero,
+    .hero__form{
+        margin-left: initial;
+        margin-right: initial;
+    }
+    .hero__form{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .hero__form > *{
+        margin-bottom: initial;
+    }
+    .hero__form [type="email"]{
+        width: 60%;
+    }
+    .hero__form [type="submit"]{
+        width: 30%;
+    }
 }
 /* ---- Animations ---- */
