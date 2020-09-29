@@ -25,9 +25,6 @@
     --fs-xsmall: .625rem;
     --fs-xxsmall: .563rem;
     --fs-xxxsmall: .375rem;
-    /* Box Shadow */
-    /* Z index */
-    /* Others */
 }
 @media screen and (min-width: 768px){
     :root{
@@ -81,11 +78,13 @@ address{
 /* Typography */
 h1{font-size: var(--fs-h1);}
 h2{font-size: var(--fs-h2);}
+
 h1,
 h2,
 header,
 .btn{font-family: var(--ff-primary);}
-.section__description{line-height: 1.31rem;}
+
+[class^="fab"]{font-size: var(--fs-normal);}
 /* Components */
 [type="email"]{
     border: none;
@@ -94,9 +93,6 @@ header,
 }
 [type="email"]::placeholder{
     color: var(--clr-lightgray);
-}
-[class^="fab"]{
-    font-size: var(--fs-normal);
 }
 .btn{
     border: none;
@@ -134,11 +130,8 @@ header,
     margin: 0 auto;
 }
 /* ---- Header Styles ---- */
-.header{
-    padding: 1.5rem 1.5rem 0;
-    /* margin-bottom: 6.125rem; */
-}
 .nav--header{
+    padding: 1.5rem 1.5rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -185,7 +178,6 @@ header,
 }
 /* Productive */
 .section.productive{
-    /* padding-top: 5.5rem; */
     background-color: var(--clr-lightgrayblue);
     position: relative;
 }
@@ -218,7 +210,6 @@ header,
     margin: 0 1.25rem;
 }
 .testimonial__quote{
-    /* margin-top: 3rem; */
     margin-bottom: .8rem;
     position: relative;
     line-height: 18.1px;
@@ -272,6 +263,7 @@ header,
     background-color: var(--clr-verydarkblue);
     color: var(--clr-white);
     font-size: var(--fs-big);
+    position: relative;
 }
 .footer__container--img,
 .footer__address,
@@ -311,6 +303,17 @@ header,
     justify-content: center;
     align-items: center;
 }
+.attribution{
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: var(--fs-small);
+}
+.attribution a {
+    color: var(--clr-brightblue);
+}
 /* ---- Media Queries ---- */
 @media screen and (min-width: 768px){
     /* Layout */
@@ -330,7 +333,10 @@ header,
     .nav--header{
         max-width: 1280px;
         margin: 0 auto;
-        padding: 0 2rem;
+        padding: 4rem 2rem 0;
+    }
+    .logo{
+        max-width: 166px;
     }
     /* Hero */
     .section.hero{
